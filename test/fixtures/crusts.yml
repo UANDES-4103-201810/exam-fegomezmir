@@ -3,9 +3,7 @@
 one:
   thin: false
   price: 1
-  Pizza: one
 
 two:
   thin: false
   price: 1
-  Pizza: two

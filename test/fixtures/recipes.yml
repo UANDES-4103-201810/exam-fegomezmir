@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  Pizza: one
   price: 1
 
 two:
   name: MyString
-  Pizza: two
   price: 1

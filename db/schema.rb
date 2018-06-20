@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180620194931) do
+ActiveRecord::Schema.define(version: 20180620201658) do
 
   create_table "crusts", force: :cascade do |t|
     t.boolean "thin"
     t.integer "price"
-    t.integer "Pizza_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Pizza_id"], name: "index_crusts_on_Pizza_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -63,11 +61,9 @@ ActiveRecord::Schema.define(version: 20180620194931) do
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.integer "Pizza_id"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Pizza_id"], name: "index_recipes_on_Pizza_id"
   end
 
 end

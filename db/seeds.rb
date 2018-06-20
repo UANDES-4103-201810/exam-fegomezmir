@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+customer1 = Customer.create  :name=> "felipe"
+
+
+recipe1 = Recipe.create :name => "napolitana", :price => 1200
+
+ingredient1 = Ingredient.create :name =>"Mozzarella", :Recipe_id => 1
+ingredient2 = Ingredient.create :name =>"champignon", :Recipe_id => 1
+ingredient3 = Ingredient.create :name =>"jamon",  :Recipe_id => 1

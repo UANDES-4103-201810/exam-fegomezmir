@@ -69,6 +69,6 @@ class CrustsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def crust_params
-      params.require(:crust).permit(:thin, :price, :Pizza_id)
+      params.require(:crust).permit(:thin, :price)
     end
 end
