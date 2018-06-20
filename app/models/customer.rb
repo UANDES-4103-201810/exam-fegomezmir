@@ -1,3 +1,9 @@
 class Customer < ApplicationRecord
-  has_many :Order
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+
+  has_many :Order, dependent: :destroy
 end

@@ -17,7 +17,7 @@ class CrustsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create crust" do
     assert_difference('Crust.count') do
-      post crusts_url, params: { crust: { price: @crust.price, thin: @crust.thin } }
+      post crusts_url, params: { crust: { price: @crust.price, thiknes: @crust.thiknes } }
     end
 
     assert_redirected_to crust_url(Crust.last)
@@ -34,7 +34,7 @@ class CrustsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update crust" do
-    patch crust_url(@crust), params: { crust: { price: @crust.price, thin: @crust.thin } }
+    patch crust_url(@crust), params: { crust: { price: @crust.price, thiknes: @crust.thiknes } }
     assert_redirected_to crust_url(@crust)
   end
 

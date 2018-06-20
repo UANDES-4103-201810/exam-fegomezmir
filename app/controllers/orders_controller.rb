@@ -10,6 +10,8 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @pizza = Pizza.find_bi(id: session[:pizza_id])
+
   end
 
   # GET /orders/new

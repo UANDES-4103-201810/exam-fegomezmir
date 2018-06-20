@@ -1,14 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Thin:</strong>
-  <%= @crust.thin %>
-</p>
+<% session[:crust_id] =  @crust.id %>
 
-<p>
-  <strong>Price:</strong>
-  <%= @crust.price %>
-</p>
+
+<div class = "container">
+  <div class = "row">
+
+
+    <h1>
+      <strong>Thiknes:</strong>
+      <%= @crust.thiknes %>
+
+    </h1>
+  </div>
+  <div class = "row">
+    <div class = "column- 4">
+      <h2> <strong>Price: $<%= @crust.price %></strong> </h2>
+
+    </div>
+
+    <div class = "column- 4">
+    </div>
+    <div class = "column- 4">
+    <a class="btn btn-success m-1" style="color: black" href="/pizzas/new">Buy</a>
+    </div>
+  </div>
+</div>
+
+
 
 <%= link_to 'Edit', edit_crust_path(@crust) %> |
 <%= link_to 'Back', crusts_path %>

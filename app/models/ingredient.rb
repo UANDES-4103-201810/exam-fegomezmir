@@ -1,3 +1,4 @@
 class Ingredient < ApplicationRecord
-  belongs_to :Recipe
+  has_many :recipe_ingredient, dependent: :destroy
+  validates :name, uniqueness: true, :presence => true
 end

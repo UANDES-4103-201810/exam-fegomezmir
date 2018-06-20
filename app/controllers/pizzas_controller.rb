@@ -15,6 +15,9 @@ class PizzasController < ApplicationController
   # GET /pizzas/new
   def new
     @pizza = Pizza.new
+    @recipe = Recipe.find_by(id: session[:recipe_id])
+    @crust = Crust.find_by(id: session[:crust_id])
+    @pizza.price = @recipe.price + @crust.price
   end
 
   # GET /pizzas/1/edit
@@ -25,6 +28,9 @@ class PizzasController < ApplicationController
   # POST /pizzas.json
   def create
     @pizza = Pizza.new(pizza_params)
+    @recipe = Recipe.find_by(id: session[:recipe_id])
+    @crust = Crust.find_by(id: session[:crust_id])
+
 
     respond_to do |format|
       if @pizza.save

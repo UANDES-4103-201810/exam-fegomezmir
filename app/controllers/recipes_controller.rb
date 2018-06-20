@@ -5,11 +5,14 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def index
     @recipes = Recipe.all
+    @ingredients = RecipeIngredient.all
+
   end
 
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @recipe_ingredients = RecipeIngredient.where(Recipe_id: @recipe.id)
   end
 
   # GET /recipes/new
