@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  thin: false
+  price: 1
+  Pizza: one
+
+two:
+  thin: false
+  price: 1
+  Pizza: two

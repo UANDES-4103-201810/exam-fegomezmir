@@ -1,0 +1,32 @@
+<%= form_with(model: crust, local: true) do |form| %>
+  <% if crust.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(crust.errors.count, "error") %> prohibited this crust from being saved:</h2>
+
+      <ul>
+      <% crust.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :thin %>
+    <%= form.check_box :thin, id: :crust_thin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :crust_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pizza_id %>
+    <%= form.text_field :Pizza_id, id: :crust_Pizza_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
